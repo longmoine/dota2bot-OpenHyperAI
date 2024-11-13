@@ -455,7 +455,13 @@ function X.ConsiderShieldCrash()
 	then
 		return BOT_ACTION_DESIRE_HIGH
 	end
-
+	
+    if bot:HasModifier('modifier_pangolier_shield_crash_jump')
+    then
+    		bot:ActionQueue_UseAbility(ShieldCrash)
+		return 
+    end
+	
     if bot:HasModifier('modifier_pangolier_rollup')
     then
         local realEnemyCount = J.GetEnemiesNearLoc(bot:GetLocation(), nRadius)

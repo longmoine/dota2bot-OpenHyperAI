@@ -6094,7 +6094,7 @@ X.ConsiderItemDesire['item_blood_grenade'] = function(item)
 	do
 		if J.IsValidHero(enemyHero)
 		and J.CanCastOnNonMagicImmune(enemyHero)
-		and J.CanKillTarget(enemyHero, nImpactDamage + (nDPS * nDuration), DAMAGE_TYPE_MAGICAL)
+		and J.CanKillTarget(enemyHero, nImpactDamage + (nDPS * nDuration) +100, DAMAGE_TYPE_MAGICAL)
 		and not J.IsSuspiciousIllusion(enemyHero)
 		and not enemyHero:HasModifier('modifier_abaddon_borrowed_time')
         and not enemyHero:HasModifier('modifier_dazzle_shallow_grave')
